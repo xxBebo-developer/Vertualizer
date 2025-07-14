@@ -36,10 +36,14 @@
   }
 }
 </script>
+  <!-- Add Babel Standalone for live transpilation -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <link rel="stylesheet" href="/index.css">
 </head>
   <body class="bg-brand-bg">
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
-  </body>
+    <!-- Change script type to text/babel for Babel to process it -->
+    <script type="text/babel" data-type="module" data-presets="react,typescript" src="/index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
 </html>
