@@ -1,7 +1,0 @@
-
-{
-  "name": "ai-audio-visualizer-deployable",
-  "version": "1.0.0",
-  "description": "A production-ready version of the AI Audio Visualizer for deployment on static hosting platforms.",
-  "private": true
-}
