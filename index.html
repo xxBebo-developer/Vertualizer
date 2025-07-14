@@ -43,8 +43,27 @@
 </head>
   <body class="bg-brand-bg">
     <div id="root"></div>
-    <!-- Change script type to text/babel and add data-presets for Babel to process it -->
-    <script type="text/babel" data-type="module" data-presets="react,typescript" src="/index.tsx"></script>
+    <!-- 
+      The contents of index.tsx are moved here.
+      This makes the initial loading more robust for static deployment on Vercel.
+    -->
+    <script type="text/babel" data-type="module" data-presets="react,typescript">
+      import React from 'react';
+      import ReactDOM from 'react-dom/client';
+      import App from './App.tsx';
+
+      const rootElement = document.getElementById('root');
+      if (!rootElement) {
+        throw new Error("Could not find root element to mount to");
+      }
+
+      const root = ReactDOM.createRoot(rootElement);
+      root.render(
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
+      );
+    </script>
   <script type="module" src="/index.tsx"></script>
 </body>
 </html>
