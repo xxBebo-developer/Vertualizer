@@ -1,5 +1,6 @@
 {
   "name": "AI Audio Visualizer",
   "description": "Create stunning audio visualizations in real-time. Upload your music and use AI to generate beautiful color palettes for your visuals.",
-  "requestFramePermissions": []
+  "requestFramePermissions": [],
+  "prompt": ""
 }
